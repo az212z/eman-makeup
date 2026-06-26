@@ -132,10 +132,24 @@ section{padding:clamp(70px,9vw,124px) 0}
 .qcard p{font-size:1.06rem;color:var(--espresso);line-height:1.8;font-weight:300;margin-top:18px}
 .qcard .by{color:var(--champ);margin-top:18px;font-size:.92rem;font-family:"Tajawal",sans-serif;font-style:italic;letter-spacing:.04em}
 
-/* cta */
-.cta{background:var(--nude);text-align:center}
-.cta h2{font-size:clamp(2.1rem,4.6vw,3.3rem);margin-bottom:16px;color:var(--espresso)}
-.cta p{color:#5a4d43;max-width:50ch;margin:0 auto 32px;font-size:1.08rem;font-weight:300}
+/* cta / booking */
+.cta{background:var(--nude)}
+.cta .head h2{color:var(--espresso)}
+.cta .head p{color:#5a4d43}
+.book-wrap{max-width:620px;margin:0 auto;background:var(--offwhite);border:1px solid rgba(61,51,44,.1);border-radius:22px;padding:clamp(28px,4vw,46px);box-shadow:var(--shadow)}
+.field{margin-bottom:20px;text-align:start}
+.field label{display:block;font-size:.92rem;color:var(--espresso);font-weight:500;margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;font-family:"IBM Plex Sans Arabic",sans-serif;font-size:1rem;font-weight:300;color:var(--espresso);background:var(--beige);border:1px solid var(--line);border-radius:12px;padding:13px 16px;transition:.3s;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--rosegold);box-shadow:0 0 0 3px rgba(201,162,126,.18);background:var(--offwhite)}
+.field textarea{resize:vertical;min-height:88px;line-height:1.7}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23B98F5A' stroke-width='2.4'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 16px center;cursor:pointer}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.book-btn{width:100%;justify-content:center;background:#25D366;color:#fff;border:0;margin-top:6px}
+.book-btn:hover{background:#1da851;color:#fff;transform:translateY(-2px)}
+.book-btn svg{width:22px;height:22px;fill:#fff}
+.book-note{text-align:center;font-size:.86rem;color:var(--soft);margin-top:16px;font-weight:300}
+.err{display:none;color:#b3503f;font-size:.86rem;margin-top:8px;text-align:center}
+.err.show{display:block}
 
 /* footer */
 footer{background:var(--espresso);color:rgba(251,248,244,.75);padding:64px 0 28px}
@@ -149,10 +163,13 @@ footer{background:var(--espresso);color:rgba(251,248,244,.75);padding:64px 0 28p
 .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:24px;font-size:.82rem;color:rgba(251,248,244,.5)}
 .foot-bot a{color:var(--rosegold)}
 
-/* instagram float */
+/* floats */
 .ig{position:fixed;bottom:26px;inset-inline-start:26px;width:60px;height:60px;border-radius:50%;background:linear-gradient(45deg,#C9A27E,#E4C7BC);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 32px -8px rgba(201,162,126,.65);z-index:800;transition:.35s}
 .ig:hover{transform:scale(1.08)}
 .ig svg{width:30px;height:30px;fill:#fff}
+.wa{position:fixed;bottom:26px;inset-inline-start:98px;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 32px -8px rgba(37,211,102,.6);z-index:800;transition:.35s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:32px;height:32px;fill:#fff}
 
 /* lightbox */
 #lb{position:fixed;inset:0;background:rgba(45,38,32,.93);z-index:1000;display:none;align-items:center;justify-content:center;padding:30px}
@@ -177,7 +194,7 @@ footer{background:var(--espresso);color:rgba(251,248,244,.75);padding:64px 0 28p
   .says .grid-q{grid-template-columns:1fr}
   .trust .wrap{grid-template-columns:1fr}.trust .it+.it{border-inline-start:0;border-top:1px solid var(--line)}
 }
-@media(max-width:560px){.grid{columns:1}.hero h1{font-size:2.6rem}}
+@media(max-width:560px){.grid{columns:1}.hero h1{font-size:2.6rem}.field-row{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
@@ -193,7 +210,7 @@ footer{background:var(--espresso);color:rgba(251,248,244,.75);padding:64px 0 28p
       <a href="#gallery">المعرض</a>
       <a href="#bts">خلف الكواليس</a>
       <a href="#say">آراء العميلات</a>
-      <a class="navcta" href="https://www.instagram.com/emy.artist/" target="_blank" rel="noopener">احجزي عبر إنستقرام</a>
+      <a class="navcta" href="#book">احجزي موعدك</a>
     </div>
     <button class="burger" id="burger" aria-label="القائمة"><span></span><span></span><span></span></button>
   </nav>
@@ -201,6 +218,10 @@ footer{background:var(--espresso);color:rgba(251,248,244,.75);padding:64px 0 28p
 
 <a class="ig" id="top" href="https://www.instagram.com/emy.artist/" target="_blank" rel="noopener" aria-label="إنستقرام">
   <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 00-1.38-2.13A5.86 5.86 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zm0 10.16A4 4 0 1116 12a4 4 0 01-4 4zm6.41-11.85a1.44 1.44 0 11-1.44-1.44 1.44 1.44 0 011.44 1.44z"/></svg>
+</a>
+
+<a class="wa" href="https://wa.me/966565109961" target="_blank" rel="noopener" aria-label="واتساب">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.91zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
 </a>
 
 <main class="wrap">
@@ -213,7 +234,7 @@ footer{background:var(--espresso);color:rgba(251,248,244,.75);padding:64px 0 28p
       <div class="lat-name">Eman Alyousif</div>
       <p class="sub">إيمان اليوسف · مكياج عرايس وسهرات بلمسة سوفت جلام هادئة، تُبرز ملامحك الطبيعية بأناقة.</p>
       <div class="acts">
-        <a class="btn btn-fill" href="https://www.instagram.com/emy.artist/" target="_blank" rel="noopener">احجزي عبر إنستقرام</a>
+        <a class="btn btn-fill" href="#book">احجزي موعدك</a>
         <a class="btn btn-out" href="#gallery">شوفي الإطلالات</a>
       </div>
     </div>
@@ -329,13 +350,45 @@ footer{background:var(--espresso);color:rgba(251,248,244,.75);padding:64px 0 28p
   </div>
 </section>
 
-<!-- CTA -->
+<!-- BOOKING -->
 <section id="book" class="cta">
-  <div class="wrap rv">
-    <span class="eyebrow">احجزي موعدك</span>
-    <h2>جاهزة لإطلالتك القادمة؟</h2>
-    <p>راسليني بالدايركت على إنستقرام بتاريخ مناسبتك ونوع الإطلالة، ونرتّب التفاصيل. الأسعار حسب المناسبة.</p>
-    <a class="btn btn-fill" href="https://www.instagram.com/emy.artist/" target="_blank" rel="noopener">تواصلي بالدايركت</a>
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">احجزي موعدك</span>
+      <h2>جاهزة لإطلالتك القادمة؟</h2>
+      <div class="uline"></div>
+      <p>عبّي التفاصيل وأرسلي طلبك عبر واتساب مباشرة، ونرتّب لك الموعد. الأسعار حسب المناسبة.</p>
+    </div>
+    <form class="book-wrap rv" id="bookForm" novalidate>
+      <div class="field">
+        <label for="bk-name">الاسم</label>
+        <input type="text" id="bk-name" name="name" placeholder="اكتبي اسمك" autocomplete="name" />
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="bk-service">نوع الخدمة</label>
+          <select id="bk-service" name="service">
+            <option value="مكياج عروس">مكياج عروس</option>
+            <option value="مكياج سهرة ومناسبة">مكياج سهرة ومناسبة</option>
+            <option value="استشارة">استشارة</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="bk-date">التاريخ المتوقع</label>
+          <input type="date" id="bk-date" name="date" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="bk-notes">ملاحظة (اختياري)</label>
+        <textarea id="bk-notes" name="notes" placeholder="أي تفاصيل تحبين تذكرينها"></textarea>
+      </div>
+      <button type="submit" class="btn book-btn" id="bookBtn">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.91zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        إرسال الطلب عبر واتساب
+      </button>
+      <div class="err" id="bookErr">من فضلك اكتبي اسمك أولاً.</div>
+      <p class="book-note">يفتح واتساب برسالة جاهزة بكل تفاصيل طلبك · أو تواصلي عبر <a href="https://www.instagram.com/emy.artist/" target="_blank" rel="noopener" style="color:var(--champ);font-weight:500">إنستقرام</a></p>
+    </form>
   </div>
 </section>
 
@@ -391,8 +444,41 @@ tabs.forEach(t=>t.addEventListener('click',()=>{
 const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
 cards.forEach(c=>c.addEventListener('click',()=>{lbi.src=c.querySelector('img').src;lb.classList.add('open')}));
 lb.addEventListener('click',()=>lb.classList.remove('open'));
+// booking form -> whatsapp
+const bookForm=document.getElementById('bookForm'),bookErr=document.getElementById('bookErr');
+bookForm.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  const name=document.getElementById('bk-name').value.trim();
+  if(!name){bookErr.classList.add('show');document.getElementById('bk-name').focus();return}
+  bookErr.classList.remove('show');
+  const service=document.getElementById('bk-service').value;
+  const date=document.getElementById('bk-date').value.trim()||'لم يُحدّد';
+  const notes=document.getElementById('bk-notes').value.trim()||'لا يوجد';
+  const msg='السلام عليكم، حابة أحجز موعد:\nالاسم: '+name+'\nالخدمة: '+service+'\nالتاريخ: '+date+'\nملاحظة: '+notes;
+  const url='https://wa.me/966565109961?text='+encodeURIComponent(msg);
+  window.open(url,'_blank','noopener');
+});
 // year
 document.getElementById('yr').textContent=new Date().getFullYear();
+// robust in-page nav: reveal target + reliable scroll (bypass competing smooth animations)
+function goToSection(t){
+  if(!t) return;
+  t.classList.add('in'); t.querySelectorAll('.rv').forEach(function(e){e.classList.add('in');});
+  var html=document.documentElement, prev=html.style.scrollBehavior;
+  html.style.scrollBehavior='auto';
+  window.scrollTo(0, t.getBoundingClientRect().top + window.pageYOffset - 68);
+  setTimeout(function(){ html.style.scrollBehavior=prev; }, 60);
+}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(ev){
+    var h=a.getAttribute('href'); if(h.length<2) return;
+    var t=document.querySelector(h); if(!t) return;
+    ev.preventDefault(); goToSection(t);
+  });
+});
+// booking section always visible (never hidden behind reveal), and honor on-load #hash
+(function(){var bk=document.getElementById('book'); if(bk){bk.classList.add('in'); bk.querySelectorAll('.rv').forEach(function(e){e.classList.add('in');});}
+ if(location.hash.length>1){var t=document.querySelector(location.hash); if(t) setTimeout(function(){goToSection(t);},700);}})();
 </script>
 </body>
 </html>
