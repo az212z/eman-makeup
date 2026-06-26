@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>إيمان اليوسف · ميك اب ارتست · جدة</title>
+<meta name="description" content="إيمان اليوسف، ميك اب ارتست في جدة. مكياج عرايس ومكياج سهرات ومناسبات بلمسة سوفت جلام إديتوريال تُبرز ملامحك بأناقة هادئة." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --beige:#F7F1EA; --offwhite:#FBF8F4; --espresso:#3D332C;
+  --rosegold:#C9A27E; --nude:#E4C7BC; --champ:#B98F5A;
+  --soft:#6E6157; --line:rgba(61,51,44,.12);
+  --shadow:0 22px 60px -28px rgba(61,51,44,.32);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"IBM Plex Sans Arabic",sans-serif;background:var(--beige);color:var(--espresso);line-height:1.9;overflow-x:hidden;font-weight:300}
+h1,h2,h3,.serif{font-family:"Aref Ruqaa",serif;font-weight:700}
+.lat{font-family:"Cormorant Garamond",serif}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{width:min(1200px,92%);margin-inline:auto}
+.eyebrow{font-family:"IBM Plex Sans Arabic","Cormorant Garamond",serif;letter-spacing:normal;font-size:.9rem;color:var(--champ);font-weight:600}
+
+/* preloader */
+#pre{position:fixed;inset:0;background:var(--beige);display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .7s ease}
+#pre.gone{opacity:0;display:none}
+#pre .mark{font-family:"Aref Ruqaa",serif;font-size:2rem;color:var(--espresso);letter-spacing:.05em;display:flex;align-items:center}
+#pre .mark span{display:inline-block;width:48px;height:1px;background:var(--rosegold);margin:0 16px;animation:grow 1.3s ease-in-out infinite alternate}
+@keyframes grow{from{transform:scaleX(.3)}to{transform:scaleX(1)}}
+
+/* nav */
+header{position:fixed;top:0;inset-inline:0;z-index:900;transition:.4s}
+nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
+header.scrolled{background:rgba(251,248,244,.88);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--line)}
+header.scrolled nav{padding:14px 0}
+.brand{font-family:"Aref Ruqaa",serif;font-size:1.5rem;color:var(--espresso);display:flex;align-items:center;gap:12px}
+.brand .dot{width:9px;height:9px;border-radius:50%;background:var(--rosegold);display:inline-block}
+.menu{display:flex;gap:36px;align-items:center}
+.menu a{font-size:.96rem;color:var(--espresso);position:relative;padding:4px 0;opacity:.82;transition:.3s;font-weight:400}
+.menu a::after{content:"";position:absolute;inset-inline:0;bottom:-2px;height:1px;background:var(--rosegold);transform:scaleX(0);transform-origin:right;transition:transform .35s}
+.menu a:hover{opacity:1}.menu a:hover::after{transform:scaleX(1)}
+.navcta{border:1px solid var(--rosegold);color:var(--champ);padding:9px 24px;border-radius:40px;font-size:.92rem;transition:.35s}
+.navcta:hover{background:var(--rosegold);color:var(--offwhite);border-color:var(--rosegold)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+.burger span{width:26px;height:2px;background:var(--espresso);transition:.3s}
+
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:48px;padding-top:90px}
+.hero-text{position:relative;z-index:2}
+.hero-text .eyebrow{margin-bottom:22px;display:block}
+.hero h1{font-size:clamp(2.8rem,6.6vw,5.4rem);line-height:1.08;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--rosegold)}
+.hero .lat-name{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.2rem,2.4vw,1.7rem);color:var(--champ);letter-spacing:.06em;margin-top:14px;font-weight:500}
+.hero p.sub{font-size:1.14rem;color:var(--soft);margin:24px 0 18px;max-width:34ch;font-weight:300}
+.hero .acts{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:44px;font-size:1rem;font-weight:500;transition:.4s;cursor:pointer;border:1px solid transparent;font-family:"IBM Plex Sans Arabic",sans-serif}
+.btn-fill{background:var(--rosegold);color:var(--offwhite)}
+.btn-fill:hover{background:var(--espresso);color:var(--offwhite);transform:translateY(-2px)}
+.btn-out{border-color:var(--espresso);color:var(--espresso)}
+.btn-out:hover{background:var(--espresso);color:var(--offwhite)}
+.hero-art{position:relative;height:82vh;max-height:700px}
+.hero-art .frame{position:absolute;inset:0;overflow:hidden;border-radius:280px 280px 18px 18px;box-shadow:var(--shadow)}
+.hero-art .frame img{width:100%;height:100%;object-fit:cover;object-position:center 22%;animation:ken 18s ease-in-out infinite alternate}
+@keyframes ken{from{transform:scale(1.04)}to{transform:scale(1.13)}}
+.hero-art .ring{position:absolute;inset:-18px;border:1px solid var(--rosegold);border-radius:290px 290px 22px 22px;opacity:.5;z-index:-1}
+.hero-art .tag{position:absolute;bottom:28px;inset-inline-start:-22px;background:var(--offwhite);padding:16px 26px;border-radius:14px;box-shadow:var(--shadow);z-index:3}
+.hero-art .tag b{font-family:"Aref Ruqaa",serif;font-size:1.5rem;color:var(--champ);display:block}
+.hero-art .tag small{font-size:.8rem;color:var(--soft)}
+
+/* trust */
+.trust{border-block:1px solid var(--line);background:var(--offwhite)}
+.trust .wrap{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
+.trust .it{padding:32px 14px}
+.trust .it+.it{border-inline-start:1px solid var(--line)}
+.trust .it b{font-family:"Aref Ruqaa",serif;font-size:1.85rem;color:var(--espresso);display:block}
+.trust .it span{font-size:.92rem;color:var(--soft)}
+
+/* section */
+section{padding:clamp(70px,9vw,124px) 0}
+.head{text-align:center;max-width:660px;margin:0 auto 56px}
+.head .eyebrow{display:block;margin-bottom:14px}
+.head h2{font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:1.18}
+.head .uline{width:0;height:2px;background:var(--rosegold);margin:20px auto 0;transition:width 1s ease}
+.head.in .uline{width:86px}
+.head p{color:var(--soft);margin-top:18px;font-size:1.05rem;font-weight:300}
+
+/* about */
+.about{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.about-imgs img{width:100%;height:100%;object-fit:cover;border-radius:14px;box-shadow:var(--shadow)}
+.about-imgs img:first-child{margin-top:38px;border-radius:120px 120px 14px 14px}
+.about-txt .eyebrow{display:block;margin-bottom:16px}
+.about-txt h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:22px;line-height:1.22}
+.about-txt p{color:#4a443d;margin-bottom:18px;font-weight:300}
+.sign{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.9rem;color:var(--rosegold);margin-top:14px}
+
+/* gallery */
+.tabs{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:44px}
+.tab{padding:10px 28px;border:1px solid var(--line);border-radius:40px;font-size:.96rem;color:var(--soft);background:none;cursor:pointer;transition:.32s;font-family:"IBM Plex Sans Arabic",sans-serif;font-weight:400}
+.tab.active{background:var(--rosegold);color:var(--offwhite);border-color:var(--rosegold)}
+.grid{columns:3;column-gap:18px}
+.card{break-inside:avoid;margin-bottom:18px;border-radius:14px;overflow:hidden;position:relative;box-shadow:var(--shadow);cursor:pointer}
+.card img{width:100%;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.07)}
+.card .ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(61,51,44,.62),transparent 55%);opacity:0;transition:.4s;display:flex;align-items:flex-end;padding:20px}
+.card:hover .ov{opacity:1}
+.card .ov span{color:var(--offwhite);font-size:1.05rem;font-family:"Aref Ruqaa",serif;transform:translateY(10px);transition:.4s}
+.card:hover .ov span{transform:translateY(0)}
+.card.hide{display:none}
+
+/* behind the scenes */
+.bts{background:var(--offwhite)}
+.bts .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
+.bts-img{position:relative}
+.bts-img img{width:100%;height:100%;object-fit:cover;border-radius:14px;box-shadow:var(--shadow);max-height:560px}
+.bts-img .ring{position:absolute;inset-inline-start:-16px;bottom:-16px;width:120px;height:120px;border:1px solid var(--rosegold);border-radius:50%;z-index:-1}
+.bts-txt .eyebrow{display:block;margin-bottom:16px}
+.bts-txt h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:22px;line-height:1.22}
+.bts-txt p{color:#4a443d;margin-bottom:18px;font-weight:300}
+.bts-list{list-style:none;margin-top:26px;display:grid;gap:14px}
+.bts-list li{display:flex;align-items:center;gap:14px;font-size:1rem;color:var(--espresso)}
+.bts-list li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--rosegold);flex:none}
+
+/* testimonials */
+.says .grid-q{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.qcard{background:var(--offwhite);border:1px solid var(--line);border-radius:16px;padding:34px 30px;text-align:center}
+.qcard .mark{font-family:"Cormorant Garamond",serif;font-size:3.4rem;color:var(--rosegold);line-height:.4;height:30px}
+.qcard p{font-size:1.06rem;color:var(--espresso);line-height:1.8;font-weight:300;margin-top:18px}
+.qcard .by{color:var(--champ);margin-top:18px;font-size:.92rem;font-family:"Cormorant Garamond",serif;font-style:italic;letter-spacing:.04em}
+
+/* cta */
+.cta{background:var(--nude);text-align:center}
+.cta h2{font-size:clamp(2.1rem,4.6vw,3.3rem);margin-bottom:16px;color:var(--espresso)}
+.cta p{color:#5a4d43;max-width:50ch;margin:0 auto 32px;font-size:1.08rem;font-weight:300}
+
+/* footer */
+footer{background:var(--espresso);color:rgba(251,248,244,.75);padding:64px 0 28px}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding-bottom:34px;border-bottom:1px solid rgba(251,248,244,.12)}
+.foot-brand{font-family:"Aref Ruqaa",serif;font-size:1.9rem;color:var(--offwhite)}
+.foot-brand p{font-family:"IBM Plex Sans Arabic";font-size:.92rem;color:rgba(251,248,244,.55);margin-top:10px;max-width:36ch;font-weight:300}
+.foot-links{display:flex;gap:48px;flex-wrap:wrap}
+.foot-col h4{color:var(--offwhite);font-family:"IBM Plex Sans Arabic";font-size:.95rem;margin-bottom:14px;letter-spacing:.05em;font-weight:500}
+.foot-col a{display:block;font-size:.92rem;margin-bottom:9px;opacity:.72;transition:.3s;font-weight:300}
+.foot-col a:hover{opacity:1;color:var(--rosegold)}
+.foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:24px;font-size:.82rem;color:rgba(251,248,244,.5)}
+.foot-bot a{color:var(--rosegold)}
+
+/* instagram float */
+.ig{position:fixed;bottom:26px;inset-inline-start:26px;width:60px;height:60px;border-radius:50%;background:linear-gradient(45deg,#C9A27E,#E4C7BC);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 32px -8px rgba(201,162,126,.65);z-index:800;transition:.35s}
+.ig:hover{transform:scale(1.08)}
+.ig svg{width:30px;height:30px;fill:#fff}
+
+/* lightbox */
+#lb{position:fixed;inset:0;background:rgba(45,38,32,.93);z-index:1000;display:none;align-items:center;justify-content:center;padding:30px}
+#lb.open{display:flex}
+#lb img{max-width:90vw;max-height:88vh;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+#lb .x{position:absolute;top:24px;inset-inline-end:30px;color:#fff;font-size:2.4rem;cursor:pointer;line-height:1}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .menu{position:fixed;top:0;bottom:0;right:0;left:auto;width:74%;max-width:320px;z-index:920;background:var(--offwhite);flex-direction:column;justify-content:center;gap:30px;transform:translateX(106%);transition:transform .4s ease;box-shadow:var(--shadow)}
+  .menu.open{transform:translateX(0)}
+  .burger{display:flex;z-index:950}
+  .hero{grid-template-columns:1fr;text-align:center;padding-top:120px;gap:32px}
+  .hero .acts{justify-content:center}.hero p.sub{margin-inline:auto}
+  .hero-art{height:64vh;order:-1}.hero-art .tag{inset-inline-start:auto;inset-inline-end:10px}
+  .about{grid-template-columns:1fr;gap:38px}
+  .bts .wrap{grid-template-columns:1fr;gap:38px}
+  .grid{columns:2}
+  .says .grid-q{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}.trust .it+.it{border-inline-start:0;border-top:1px solid var(--line)}
+}
+@media(max-width:560px){.grid{columns:1}.hero h1{font-size:2.6rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div id="pre"><div class="mark">إيمان<span></span></div></div>
+
+<header id="hdr">
+  <nav class="wrap">
+    <a class="brand" href="#top"><span class="dot"></span>إيمان اليوسف</a>
+    <div class="menu" id="menu">
+      <a href="#about">عن الفنانة</a>
+      <a href="#gallery">المعرض</a>
+      <a href="#bts">خلف الكواليس</a>
+      <a href="#say">آراء العميلات</a>
+      <a class="navcta" href="https://www.instagram.com/emy.artist/" target="_blank" rel="noopener">احجزي عبر إنستقرام</a>
+    </div>
+    <button class="burger" id="burger" aria-label="القائمة"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<a class="ig" id="top" href="https://www.instagram.com/emy.artist/" target="_blank" rel="noopener" aria-label="إنستقرام">
+  <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 00-1.38-2.13A5.86 5.86 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zm0 10.16A4 4 0 1116 12a4 4 0 01-4 4zm6.41-11.85a1.44 1.44 0 11-1.44-1.44 1.44 1.44 0 011.44 1.44z"/></svg>
+</a>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <span class="eyebrow">ميك اب ارتست · جدة</span>
+      <h1>طلّتكِ<br>تبدأ من <em>التفاصيل</em></h1>
+      <div class="lat-name">Eman Alyousif</div>
+      <p class="sub">إيمان اليوسف · مكياج عرايس وسهرات بلمسة سوفت جلام هادئة، تُبرز ملامحك الطبيعية بأناقة.</p>
+      <div class="acts">
+        <a class="btn btn-fill" href="https://www.instagram.com/emy.artist/" target="_blank" rel="noopener">احجزي عبر إنستقرام</a>
+        <a class="btn btn-out" href="#gallery">شوفي الإطلالات</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="ring"></div>
+      <div class="frame"><img src="assets/img/look-06.jpg" alt="إطلالة عروس بمكياج سوفت جلام" /></div>
+      <div class="tag"><b>15.9 ألف</b><small>متابعة على إنستقرام</small></div>
+    </div>
+  </section>
+</main>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="wrap">
+    <div class="it"><b>15.9 ألف متابعة</b><span>على إنستقرام @emy.artist</span></div>
+    <div class="it"><b>مكياج عرايس وسهرات</b><span>إطلالات تليق بمناسبتك</span></div>
+    <div class="it"><b>جدة</b><span>تواصلي بالدايركت للتفاصيل</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about">
+    <div class="about-imgs rv">
+      <img src="assets/img/look-02.jpg" alt="إطلالة عروس سوفت جلام" />
+      <img src="assets/img/look-eye.jpg" alt="كلوز اب عين بمكياج جريء" />
+    </div>
+    <div class="about-txt rv">
+      <span class="eyebrow">عن الفنانة</span>
+      <h2>لمسة تُبرز جمالكِ كما هو</h2>
+      <p>إيمان اليوسف، ميك اب ارتست من جدة، تؤمن أن أجمل مكياج هو اللي يخلّيك تشبهين نفسك في أحلى نسخة. ستايلها سوفت جلام إديتوريال: بشرة منعّمة، عيون ناعمة، وتفاصيل مدروسة بدون مبالغة.</p>
+      <p>من مكياج العروس في يومها الأهم، إلى إطلالات السهرات والمناسبات، كل وجه يأخذ وقته وعنايته الخاصة. وهذا اللي خلّى أكثر من 15.9 ألف متابعة يتابعون كل إطلالة جديدة على إنستقرام.</p>
+      <div class="sign">Eman</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">المعرض</span>
+      <h2>إطلالات من أعمالها</h2>
+      <div class="uline"></div>
+      <p>مجموعة من إطلالات العرايس والسهرات. اضغطي على أي إطلالة لتشوفيها أكبر.</p>
+    </div>
+    <div class="tabs rv">
+      <button class="tab active" data-f="all">الكل</button>
+      <button class="tab" data-f="bride">عرايس</button>
+      <button class="tab" data-f="evening">سهرات</button>
+    </div>
+    <div class="grid" id="grid">
+      <div class="card rv" data-c="bride"><img src="assets/img/look-06.jpg" alt="إطلالة عروس قوية"><div class="ov"><span>عروس · سوفت جلام</span></div></div>
+      <div class="card rv" data-c="bride"><img src="assets/img/look-01.jpg" alt="إطلالة عروس ناعمة"><div class="ov"><span>عروس · لمسة ناعمة</span></div></div>
+      <div class="card rv" data-c="evening"><img src="assets/img/look-04.jpg" alt="إطلالة سهرة جلام"><div class="ov"><span>سهرة · جلام</span></div></div>
+      <div class="card rv" data-c="bride"><img src="assets/img/look-02.jpg" alt="إطلالة عروس سوفت جلام"><div class="ov"><span>عروس · سوفت جلام</span></div></div>
+      <div class="card rv" data-c="bride"><img src="assets/img/look-03.jpg" alt="إطلالة عروس راقية"><div class="ov"><span>عروس · إطلالة راقية</span></div></div>
+      <div class="card rv" data-c="evening"><img src="assets/img/look-07.jpg" alt="إطلالة سهرة"><div class="ov"><span>سهرة · مناسبات</span></div></div>
+      <div class="card rv" data-c="bride"><img src="assets/img/look-05.jpg" alt="إطلالة عروس ناعمة"><div class="ov"><span>عروس · لمسة دافئة</span></div></div>
+      <div class="card rv" data-c="bride"><img src="assets/img/look-08.jpg" alt="إطلالة عروس سوفت جلام"><div class="ov"><span>عروس · سوفت جلام</span></div></div>
+      <div class="card rv" data-c="evening"><img src="assets/img/look-eye.jpg" alt="كلوز اب عين بمكياج جريء"><div class="ov"><span>تفاصيل · عين جريئة</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BEHIND THE SCENES -->
+<section id="bts" class="bts">
+  <div class="wrap">
+    <div class="bts-img rv">
+      <div class="ring"></div>
+      <img src="assets/img/look-bts.jpg" alt="إيمان أثناء تطبيق المكياج" />
+    </div>
+    <div class="bts-txt rv">
+      <span class="eyebrow">خلف الكواليس</span>
+      <h2>العناية بالتفاصيل قبل الكاميرا</h2>
+      <p>كل إطلالة تبدأ قبل أول لمسة مكياج: قراءة ملامح الوجه، تجهيز البشرة، واختيار الدرجات اللي تليق بإضاءة المناسبة. الوقت اللي يُصرف على التحضير هو سرّ ثبات الطلّة وصفائها طوال اليوم.</p>
+      <ul class="bts-list">
+        <li>تجهيز وترطيب البشرة قبل البدء</li>
+        <li>اختيار درجات تناسب لون بشرتك ومناسبتك</li>
+        <li>تطبيق متدرّج يضمن ثبات وصفاء الطلّة</li>
+        <li>لمسات أخيرة تُبرز ملامحك بشكل طبيعي</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="say" class="says">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">آراء العميلات</span>
+      <h2>كلمات تركتها العرايس</h2>
+      <div class="uline"></div>
+      <p>انطباعات دافئة من عميلات عشن إطلالتهن في يومهن المهم.</p>
+    </div>
+    <div class="grid-q">
+      <div class="qcard rv">
+        <div class="mark">”</div>
+        <p>حسّيت إن المكياج طلّعني أحلى نسخة من نفسي، خفيف وثابت طول اليوم. الله يسعدك.</p>
+        <div class="by">— من عروس</div>
+      </div>
+      <div class="qcard rv">
+        <div class="mark">”</div>
+        <p>تعامل راقي وذوق في اختيار الدرجات. الإطلالة طلعت بالضبط مثل ما تمنّيت لسهرتي.</p>
+        <div class="by">— من عميلة</div>
+      </div>
+      <div class="qcard rv">
+        <div class="mark">”</div>
+        <p>اهتمام بأدق التفاصيل وصبر على كل خطوة. أنصح فيها لكل عروس تبي طلّة ناعمة وأنيقة.</p>
+        <div class="by">— من عروس</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="book" class="cta">
+  <div class="wrap rv">
+    <span class="eyebrow">احجزي موعدك</span>
+    <h2>جاهزة لإطلالتك القادمة؟</h2>
+    <p>راسليني بالدايركت على إنستقرام بتاريخ مناسبتك ونوع الإطلالة، ونرتّب التفاصيل. الأسعار حسب المناسبة.</p>
+    <a class="btn btn-fill" href="https://www.instagram.com/emy.artist/" target="_blank" rel="noopener">تواصلي بالدايركت</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">إيمان اليوسف<p>ميك اب ارتست · مكياج عرايس وسهرات بلمسة سوفت جلام · جدة، المملكة العربية السعودية.</p></div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>تواصل</h4>
+          <a href="https://www.instagram.com/emy.artist/" target="_blank" rel="noopener">إنستقرام · emy.artist@</a>
+          <a href="https://www.instagram.com/emy.artist/" target="_blank" rel="noopener">احجزي بالدايركت</a>
+        </div>
+        <div class="foot-col">
+          <h4>روابط</h4>
+          <a href="#about">عن الفنانة</a>
+          <a href="#gallery">المعرض</a>
+          <a href="#bts">خلف الكواليس</a>
+          <a href="#say">آراء العميلات</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr"></span> إيمان اليوسف. جميع الحقوق محفوظة.</span>
+      <span>تصميم الموقع: <a href="https://az212z.github.io/ali-design/#services" target="_blank" rel="noopener">وَقْع · علي</a></span>
+    </div>
+  </div>
+</footer>
+
+<div id="lb"><span class="x">&times;</span><img src="" alt="إطلالة مكبّرة" /></div>
+
+<script>
+// preloader
+window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('pre').classList.add('gone'),420)});
+// nav scroll
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40));
+// burger
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>menu.classList.toggle('open'));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+// reveal + underline
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.16});
+document.querySelectorAll('.rv,.head').forEach(el=>io.observe(el));
+// gallery filter
+const tabs=document.querySelectorAll('.tab'),cards=document.querySelectorAll('#grid .card');
+tabs.forEach(t=>t.addEventListener('click',()=>{
+  tabs.forEach(x=>x.classList.remove('active'));t.classList.add('active');
+  const f=t.dataset.f;
+  cards.forEach(c=>c.classList.toggle('hide',!(f==='all'||c.dataset.c===f)));
+}));
+// lightbox
+const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+cards.forEach(c=>c.addEventListener('click',()=>{lbi.src=c.querySelector('img').src;lb.classList.add('open')}));
+lb.addEventListener('click',()=>lb.classList.remove('open'));
+// year
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
